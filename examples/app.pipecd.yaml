@@ -19,8 +19,8 @@ spec:
           deployment_time: "{{ ansible_date_time.iso8601 }}"
   
   # Simple pipeline for testing
-  pipeline:
-    stages:
-      - name: ANSIBLE_SYNC
-        with:
-          timeout: 300  
+#  pipeline:
+#    stages:
+#      - name: ANSIBLE_SYNC
+#        with:
+#          timeout: 300  
