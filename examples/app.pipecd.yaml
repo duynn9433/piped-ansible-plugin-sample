@@ -6,7 +6,7 @@ spec:
   labels:
     env: test
     plugin: ansible
-
+  plugin: ansible
   # Ansible plugin configuration
   plugins:
     ansible:
@@ -22,5 +22,6 @@ spec:
 pipeline:
   stages:
     - name: ANSIBLE_SYNC
-      with: "{}"
+      with:
+        timeout: 300
         
