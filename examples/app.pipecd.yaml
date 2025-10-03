@@ -6,16 +6,17 @@ spec:
   labels:
     env: test
     plugin: ansible
-  plugin: ansible
+  # plugin: ansible
   # Ansible plugin configuration
-  ansible:
-    playbook:
-      path: playbook.yml
-      inventory: inventory
-      verbosity: 2
-      extraVars:
-        test_var: "hello_world"
-        deployment_time: "{{ ansible_date_time.iso8601 }}"
+  plugins:
+    ansible:
+      playbook:
+        path: playbook.yml
+        inventory: inventory
+        verbosity: 2
+        extraVars:
+          test_var: "hello_world"
+          deployment_time: "{{ ansible_date_time.iso8601 }}"
 
 # Simple pipeline for testing
   pipeline:
