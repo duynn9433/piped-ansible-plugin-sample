@@ -1,5 +1,5 @@
 [target_hosts]
-target_host ansible_host=198.19.249.196 ansible_connection=ssh ansible_user=noroom113
+target_host ansible_host=192.168.139.199 ansible_connection=ssh ansible_user=deploy
 
 [target_hosts:vars]
 ansible_python_interpreter=/usr/bin/python3
