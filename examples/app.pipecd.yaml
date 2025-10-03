@@ -1,12 +1,12 @@
 apiVersion: pipecd.dev/v1beta1
-kind: KubernetesApp
+kind: ANSIBLE_APP
 spec:
   name: ansible-test-app
   description: Test application using Ansible plugin with remote SSH connection
   labels:
     env: test
     plugin: ansible
-  
+
   # Ansible plugin configuration
   plugins:
     ansible:
@@ -17,10 +17,10 @@ spec:
         extraVars:
           test_var: "hello_world"
           deployment_time: "{{ ansible_date_time.iso8601 }}"
-  
-  # Simple pipeline for testing
- pipeline:
-   stages:
-     - name: ANSIBLE_SYNC
-       with:
-         timeout: 300  
+
+# Simple pipeline for testing
+pipeline:
+  stages:
+    - name: ANSIBLE_SYNC
+      with:
+        timeout: 300
