@@ -22,4 +22,5 @@ spec:
 pipeline:
   stages:
     - name: ANSIBLE_SYNC
+      with: "{}"
         
