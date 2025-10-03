@@ -7,7 +7,9 @@
     - name: Debug message
       debug:
         msg: "Hello from PipeCD Ansible Plugin!"
-        
+    - name: Debug message
+      debug:
+        msg: "Hello from PipeCD Ansible Plugin2!"
     - name: Test connectivity
       ping:
         
