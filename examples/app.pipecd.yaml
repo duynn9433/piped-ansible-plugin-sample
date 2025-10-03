@@ -22,5 +22,8 @@ spec:
 pipeline:
   stages:
     - name: ANSIBLE_SYNC
-      with:
-        timeout: 300
+      with: | 
+      {
+        "timeout": 300
+      }
+        
